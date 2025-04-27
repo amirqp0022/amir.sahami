@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amir Sahami | Work Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    animation: bodyFade 1.5s ease;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0072ff, #4bb4f1); /* زیباتر کردن گرادیانت */
+    text-align: center;
+    padding: 30px 20px;  /* هدر کوچکتر شد */
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 15px;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: white;
+    border-radius: 50px;
+  }
+
+  .header h1 {
+    font-size: 2.6rem;  /* هدر کوچکتر شد */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.2s ease;
+  }
+
+  .header p {
+    font-size: 1.2rem;  /* اندازه فونت کوچکتر شد */
+    font-weight: 400;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease;
+  }
+
+  /* Portfolio Section */
+  .portfolio-section {
+    padding: 80px 30px;
+    background: linear-gradient(90deg, #f8f9fa, #e3f2fd);
+    flex: 1;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    animation: fadeInGrid 2s ease;
+  }
+
+  /* Portfolio Card */
+  .portfolio-card {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #0072ff;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Media */
+  .portfolio-media img,
+  .portfolio-media video,
+  .portfolio-media embed {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #0072ff;
+  }
+
+  .portfolio-media {
+    position: relative;
+  }
+
+  /* Content */
+  .portfolio-content {
+    padding: 20px;
+  }
+
+  .portfolio-content h3 {
+    font-size: 1.6rem;
+    color: #0072ff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  .portfolio-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  /* Multiple Files Card */
+  .multiple-files ul {
+    list-style: none;
+    padding: 20px;
+  }
+
+  .multiple-files li {
+    margin-bottom: 10px;
+  }
+
+  .multiple-files a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .multiple-files a:hover {
+    color: #0072ff;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: linear-gradient(135deg, #005fa3, #1a75d6); /* زیباتر کردن گرادیانت */
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInGrid {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes bodyFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>Amir Sahami</h1>
+  <p>Work Resume</p>
+</header><!-- MAIN CONTENT -->
+<section class="portfolio-section">
+
+    <div class="portfolio-grid">
+      <!-- Single Project Image -->
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <img src="https://via.placeholder.com/600x400?text=Project+Image" alt="Project Image">
+        </div>
+        <div class="portfolio-content">
+          <h3>Website Development</h3>
+          <p>Modern web application using React and Node.js</p>
+        </div>
+      </div>
+      <!-- Single Project Video -->
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+        </div>
+        <div class="portfolio-content">
+          <h3>Company Promo Video</h3>
+          <p>Professional Video Editing Project</p>
+        </div>
+      </div>
+  
+      <!-- Single Project PDF -->
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" type="application/pdf">
+        </div>
+        <div class="portfolio-content">
+          <h3>Business Plan Document</h3>
+          <p>Complete business strategy in PDF</p>
+        </div>
+      </div>
+  
+      <!-- Multiple Project Files -->
+      <div class="portfolio-card multiple-files">
+        <div class="portfolio-content">
+          <h3>Project Documents</h3>
+          <ul>
+            <li><a href="#">Feasibility Study.pdf</a></li>
+            <li><a href="#">System Architecture.docx</a></li>
+            <li><a href="#">Marketing Strategy.pdf</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>All rights reserved © Amir Sahami. Unauthorized copying is strictly prohibited.</p>
+  </footer>
+  
+  </body>
+  </html>
